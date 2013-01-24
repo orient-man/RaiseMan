@@ -14,9 +14,18 @@
 {
     self = [super init];
     if (self) {
-        // Add your subclass-specific initialization here.
+        employees = [[NSMutableArray alloc] init];
     }
     return self;
+}
+
+- (void)setEmployees:(NSMutableArray *)array
+{
+    if (array == employees) {
+        return;
+    }
+
+    employees = array;
 }
 
 - (NSString *)windowNibName
