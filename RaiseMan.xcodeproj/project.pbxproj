@@ -17,8 +17,8 @@
 		F4FA1EA516B1D7FF00D01622 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4FA1EA416B1D7FF00D01622 /* SenTestingKit.framework */; };
 		F4FA1EA616B1D7FF00D01622 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4FA1E8316B1D7FF00D01622 /* Cocoa.framework */; };
 		F4FA1EAE16B1D7FF00D01622 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F4FA1EAC16B1D7FF00D01622 /* InfoPlist.strings */; };
-		F4FA1EB116B1D7FF00D01622 /* RaiseManTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F4FA1EB016B1D7FF00D01622 /* RaiseManTests.m */; };
 		F4FA1EBC16B1D89500D01622 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = F4FA1EBB16B1D89500D01622 /* Person.m */; };
+		F4FA1EBF16B1E25400D01622 /* PersonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F4FA1EBE16B1E25400D01622 /* PersonTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,10 +50,10 @@
 		F4FA1EA416B1D7FF00D01622 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		F4FA1EAB16B1D7FF00D01622 /* RaiseManTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RaiseManTests-Info.plist"; sourceTree = "<group>"; };
 		F4FA1EAD16B1D7FF00D01622 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		F4FA1EAF16B1D7FF00D01622 /* RaiseManTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RaiseManTests.h; sourceTree = "<group>"; };
-		F4FA1EB016B1D7FF00D01622 /* RaiseManTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RaiseManTests.m; sourceTree = "<group>"; };
 		F4FA1EBA16B1D89500D01622 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		F4FA1EBB16B1D89500D01622 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		F4FA1EBD16B1E25400D01622 /* PersonTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonTests.h; sourceTree = "<group>"; };
+		F4FA1EBE16B1E25400D01622 /* PersonTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,9 +145,9 @@
 		F4FA1EA916B1D7FF00D01622 /* RaiseManTests */ = {
 			isa = PBXGroup;
 			children = (
-				F4FA1EAF16B1D7FF00D01622 /* RaiseManTests.h */,
-				F4FA1EB016B1D7FF00D01622 /* RaiseManTests.m */,
 				F4FA1EAA16B1D7FF00D01622 /* Supporting Files */,
+				F4FA1EBD16B1E25400D01622 /* PersonTests.h */,
+				F4FA1EBE16B1E25400D01622 /* PersonTests.m */,
 			);
 			path = RaiseManTests;
 			sourceTree = "<group>";
@@ -280,7 +280,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4FA1EB116B1D7FF00D01622 /* RaiseManTests.m in Sources */,
+				F4FA1EBF16B1E25400D01622 /* PersonTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
