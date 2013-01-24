@@ -34,4 +34,20 @@
                          @"not 0");
 }
 
+- (void)testSorting
+{
+    // arrange
+    NSMutableArray *array =
+        [[NSMutableArray alloc] initWithObjects: @"b", @"a", @"A", @"ą", nil];
+
+    // act
+    [array sortUsingComparator:^(NSString *s1, NSString* s2) {
+        return [s1 caseInsensitiveCompare:s2];
+    }];
+
+    // assert
+    STAssertEqualObjects(@"aAąb",
+                         [array componentsJoinedByString:@""],
+                         @"wrong sort");
+}
 @end
