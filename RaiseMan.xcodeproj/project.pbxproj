@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F484BEEC16B5CDB300ECD2DA /* DocumentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F484BEEB16B5CDB300ECD2DA /* DocumentTests.m */; };
 		F4FA1E8416B1D7FF00D01622 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4FA1E8316B1D7FF00D01622 /* Cocoa.framework */; };
 		F4FA1E8E16B1D7FF00D01622 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F4FA1E8C16B1D7FF00D01622 /* InfoPlist.strings */; };
 		F4FA1E9016B1D7FF00D01622 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F4FA1E8F16B1D7FF00D01622 /* main.m */; };
@@ -32,6 +33,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F484BEEA16B5CDB300ECD2DA /* DocumentTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DocumentTests.h; sourceTree = "<group>"; };
+		F484BEEB16B5CDB300ECD2DA /* DocumentTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DocumentTests.m; sourceTree = "<group>"; };
 		F4FA1E7F16B1D7FF00D01622 /* RaiseMan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RaiseMan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4FA1E8316B1D7FF00D01622 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		F4FA1E8616B1D7FF00D01622 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -120,9 +123,9 @@
 			isa = PBXGroup;
 			children = (
 				F4FA1E9516B1D7FF00D01622 /* Document.h */,
+				F4FA1E9616B1D7FF00D01622 /* Document.m */,
 				F4FA1EBA16B1D89500D01622 /* Person.h */,
 				F4FA1EBB16B1D89500D01622 /* Person.m */,
-				F4FA1E9616B1D7FF00D01622 /* Document.m */,
 				F4FA1E9816B1D7FF00D01622 /* Document.xib */,
 				F4FA1E9B16B1D7FF00D01622 /* MainMenu.xib */,
 				F4FA1E8A16B1D7FF00D01622 /* Supporting Files */,
@@ -145,9 +148,11 @@
 		F4FA1EA916B1D7FF00D01622 /* RaiseManTests */ = {
 			isa = PBXGroup;
 			children = (
-				F4FA1EAA16B1D7FF00D01622 /* Supporting Files */,
+				F484BEEA16B5CDB300ECD2DA /* DocumentTests.h */,
+				F484BEEB16B5CDB300ECD2DA /* DocumentTests.m */,
 				F4FA1EBD16B1E25400D01622 /* PersonTests.h */,
 				F4FA1EBE16B1E25400D01622 /* PersonTests.m */,
+				F4FA1EAA16B1D7FF00D01622 /* Supporting Files */,
 			);
 			path = RaiseManTests;
 			sourceTree = "<group>";
@@ -281,6 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4FA1EBF16B1E25400D01622 /* PersonTests.m in Sources */,
+				F484BEEC16B5CDB300ECD2DA /* DocumentTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,6 +470,7 @@
 				F4FA1EB616B1D7FF00D01622 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F4FA1EB716B1D7FF00D01622 /* Build configuration list for PBXNativeTarget "RaiseManTests" */ = {
 			isa = XCConfigurationList;
@@ -472,6 +479,7 @@
 				F4FA1EB916B1D7FF00D01622 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
