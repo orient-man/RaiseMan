@@ -7,6 +7,7 @@
 //
 
 #import "Document.h"
+#import "Person.h"
 
 @implementation Document
 
@@ -26,6 +27,36 @@
     }
 
     employees = array;
+}
+
+- (void)insertObject:(Person *)person inEmployeesAtIndex:(int)index
+{
+    NSLog(@"adding %@ to %@", person, employees);
+
+    NSUndoManager *undo = [self undoManager];
+    [[undo prepareWithInvocationTarget:self] removeObjectFromEmployeesAtIndex:index];
+    if (![undo isUndoing]) {
+        [undo setActionName:@"Insert Person"];
+    }
+
+    [employees insertObject:person atIndex:index];
+}
+
+-(void)removeObjectFromEmployeesAtIndex:(int)index
+{
+    Person *person = [employees objectAtIndex:index];
+
+    NSLog(@"removing %@ from %@", person, employees);
+
+    NSUndoManager *undo = [self undoManager];
+    [[undo prepareWithInvocationTarget:self] insertObject:person
+                                       inEmployeesAtIndex:index];
+
+    if (![undo isUndoing]) {
+        [undo setActionName:@"Delete Person"];
+    }
+
+    [employees removeObjectAtIndex:index];
 }
 
 - (NSString *)windowNibName
