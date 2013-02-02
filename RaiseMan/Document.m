@@ -37,6 +37,34 @@
     }
 }
 
+- (void)createEmployee:(id)sender
+{
+    NSWindow *window = [tableView window];
+
+    BOOL editingEnded = [window makeFirstResponder:window];
+    if (!editingEnded) {
+        NSLog(@"Unable to end editing");
+        return;
+    }
+
+    NSUndoManager *undo = [self undoManager];
+    if ([undo groupingLevel]) {
+        [undo endUndoGrouping];
+        [undo beginUndoGrouping];
+    }
+
+    Person *person = [employeeController newObject];
+    [employeeController addObject:person];
+
+    // re-sort
+    [employeeController rearrangeObjects];
+    NSArray *array = [employeeController arrangedObjects];
+    NSUInteger row = [array indexOfObjectIdenticalTo:person];
+
+    NSLog(@"starting edit of %@ in row %ld", person, row);
+    [tableView editColumn:0 row:row withEvent:nil select:YES];
+}
+
 - (void)insertObject:(Person *)person inEmployeesAtIndex:(int)index
 {
     NSLog(@"adding %@ to %@", person, employees);
