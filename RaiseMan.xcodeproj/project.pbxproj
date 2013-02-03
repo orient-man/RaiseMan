@@ -10,7 +10,7 @@
 		F40637D016BDBFD1005CFE62 /* BBall.icns in Resources */ = {isa = PBXBuildFile; fileRef = F40637CF16BDBFD1005CFE62 /* BBall.icns */; };
 		F46110DA16BEFD94006C1D63 /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = F46110D916BEFD94006C1D63 /* AppController.m */; };
 		F46110DE16BEFEE7006C1D63 /* PreferenceController.m in Sources */ = {isa = PBXBuildFile; fileRef = F46110DC16BEFEE7006C1D63 /* PreferenceController.m */; };
-		F46110DF16BEFEE7006C1D63 /* Preference.xib in Resources */ = {isa = PBXBuildFile; fileRef = F46110DD16BEFEE7006C1D63 /* Preference.xib */; };
+		F46110DF16BEFEE7006C1D63 /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = F46110DD16BEFEE7006C1D63 /* Preferences.xib */; };
 		F484BEEC16B5CDB300ECD2DA /* DocumentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F484BEEB16B5CDB300ECD2DA /* DocumentTests.m */; };
 		F4FA1E8416B1D7FF00D01622 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4FA1E8316B1D7FF00D01622 /* Cocoa.framework */; };
 		F4FA1E8E16B1D7FF00D01622 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F4FA1E8C16B1D7FF00D01622 /* InfoPlist.strings */; };
@@ -42,7 +42,7 @@
 		F46110D916BEFD94006C1D63 /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
 		F46110DB16BEFEE7006C1D63 /* PreferenceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferenceController.h; sourceTree = "<group>"; };
 		F46110DC16BEFEE7006C1D63 /* PreferenceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferenceController.m; sourceTree = "<group>"; };
-		F46110DD16BEFEE7006C1D63 /* Preference.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Preference.xib; sourceTree = "<group>"; };
+		F46110DD16BEFEE7006C1D63 /* Preferences.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Preferences.xib; sourceTree = "<group>"; };
 		F484BEEA16B5CDB300ECD2DA /* DocumentTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DocumentTests.h; sourceTree = "<group>"; };
 		F484BEEB16B5CDB300ECD2DA /* DocumentTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DocumentTests.m; sourceTree = "<group>"; };
 		F4FA1E7F16B1D7FF00D01622 /* RaiseMan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RaiseMan.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -142,7 +142,7 @@
 				F46110DC16BEFEE7006C1D63 /* PreferenceController.m */,
 				F4FA1E9816B1D7FF00D01622 /* Document.xib */,
 				F4FA1E9B16B1D7FF00D01622 /* MainMenu.xib */,
-				F46110DD16BEFEE7006C1D63 /* Preference.xib */,
+				F46110DD16BEFEE7006C1D63 /* Preferences.xib */,
 				F4FA1E8A16B1D7FF00D01622 /* Supporting Files */,
 			);
 			path = RaiseMan;
@@ -258,7 +258,7 @@
 				F4FA1E9A16B1D7FF00D01622 /* Document.xib in Resources */,
 				F4FA1E9D16B1D7FF00D01622 /* MainMenu.xib in Resources */,
 				F40637D016BDBFD1005CFE62 /* BBall.icns in Resources */,
-				F46110DF16BEFEE7006C1D63 /* Preference.xib in Resources */,
+				F46110DF16BEFEE7006C1D63 /* Preferences.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
