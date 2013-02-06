@@ -10,6 +10,9 @@
 
 @implementation PreferenceController
 
+NSString * const BNRTableBgColorKey = @"TableBackgroundColor";
+NSString * const BNREmptyDocKey = @"EmptyDocumentFlag";
+
 - (id)init
 {
     self = [super initWithWindowNibName:@"Preferences"];
@@ -20,21 +23,41 @@
     return self;
 }
 
+- (NSColor *)tableBgColor
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSData *colorAsData = [defaults objectForKey:BNRTableBgColorKey];
+    return [NSKeyedUnarchiver unarchiveObjectWithData:colorAsData];
+}
+
+- (BOOL)emptyDoc
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    return [defaults boolForKey:BNREmptyDocKey];
+}
+
 - (void)windowDidLoad
 {
     [super windowDidLoad];
+    [colorWell setColor:[self tableBgColor]];
+    [checkbox setState:[self emptyDoc]];
     NSLog(@"Nib file loaded");
 }
 
 - (void)changeBackgroundColor:(id)sender
 {
     NSColor *color = [colorWell color];
+    NSData *colorAsData = [NSKeyedArchiver archivedDataWithRootObject:color];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:colorAsData forKey:BNRTableBgColorKey];
     NSLog(@"Color changed: %@", color);
 }
 
 - (void)changeNewEmptyDoc:(id)sender
 {
     NSInteger state = [checkbox state];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setBool:state forKey:BNREmptyDocKey];
     NSLog(@"Checkbox changed %ld", state);
 }
 

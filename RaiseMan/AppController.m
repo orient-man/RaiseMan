@@ -11,6 +11,22 @@
 
 @implementation AppController
 
++ (void)initialize
+{
+    NSMutableDictionary *defaultValues = [NSMutableDictionary dictionary];
+    NSData *colorAsData =
+        [NSKeyedArchiver archivedDataWithRootObject: [NSColor yellowColor]];
+
+    // defaults
+    [defaultValues setObject:colorAsData forKey:BNRTableBgColorKey];
+    [defaultValues setObject:[NSNumber numberWithBool:YES] forKey:BNREmptyDocKey];
+
+    // register them
+    [[NSUserDefaults standardUserDefaults] registerDefaults: defaultValues];
+
+    NSLog(@"registered defaults: %@", defaultValues);
+}
+
 - (void)showPreferencePanel:(id)sender
 {
     if (!preferenceController) {

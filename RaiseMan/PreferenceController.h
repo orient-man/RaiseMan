@@ -8,11 +8,16 @@
 
 #import <Cocoa/Cocoa.h>
 
+extern NSString * const BNRTableBgColorKey;
+extern NSString * const BNREmptyDocKey;
+
 @interface PreferenceController : NSWindowController {
     IBOutlet NSColorWell *colorWell;
     IBOutlet NSButton *checkbox;
 }
 
+- (NSColor *)tableBgColor;
+- (BOOL)emptyDoc;
 - (IBAction)changeBackgroundColor:(id)sender;
 - (IBAction)changeNewEmptyDoc:(id)sender;
 
