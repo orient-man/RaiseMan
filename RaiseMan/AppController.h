@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 @class PreferenceController;
 
-@interface AppController : NSObject {
+@interface AppController : NSObject <NSApplicationDelegate> {
     PreferenceController *preferenceController;
 }
 

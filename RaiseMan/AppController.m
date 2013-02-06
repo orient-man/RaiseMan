@@ -27,6 +27,13 @@
     NSLog(@"registered defaults: %@", defaultValues);
 }
 
+// UWAGA: wymaga ustawienia przed "Edit Scheme": Launch app without state restoration
+- (BOOL)applicationShouldOpenUntitledFile:(NSApplication *)sender
+{
+    NSLog(@"applicationShouldOpenUntitledFile:");
+    return [[NSUserDefaults standardUserDefaults] boolForKey:BNREmptyDocKey];
+}
+
 - (void)showPreferencePanel:(id)sender
 {
     if (!preferenceController) {
