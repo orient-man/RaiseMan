@@ -16,8 +16,8 @@
     Person *person = [[Person alloc] init];
 
     STAssertEqualObjects([person valueForKey:@"expectedRaise"],
-                         [NSNumber numberWithFloat:5.0],
-                         @"default value is 5.0");
+                         [NSNumber numberWithFloat:0.0],
+                         @"default value is 0.0");
 }
 
 - (void)testSettingNilShouldResetValueToZero
