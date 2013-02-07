@@ -61,4 +61,14 @@ NSString * const BNREmptyDocKey = @"EmptyDocumentFlag";
     NSLog(@"Checkbox changed %ld", state);
 }
 
+- (IBAction)reset:(id)sender
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults removeObjectForKey:BNRTableBgColorKey];
+    [defaults removeObjectForKey:BNREmptyDocKey];
+    [colorWell setColor:[self tableBgColor]];
+    [checkbox setState:[self emptyDoc]];
+    NSLog(@"Prefrences reseted");
+}
+
 @end
