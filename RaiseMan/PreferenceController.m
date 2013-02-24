@@ -53,7 +53,11 @@ NSString * const BNRColorChangedNotification = @"BNRColorChanged";
     [defaults setObject:colorAsData forKey:BNRTableBgColorKey];
 
     NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
-    [nc postNotificationName:BNRColorChangedNotification object:self];
+    NSDictionary *notificationData = [NSDictionary dictionaryWithObject:color
+                                                                 forKey:@"color"];
+    [nc postNotificationName:BNRColorChangedNotification
+                      object:self
+                    userInfo:notificationData];
 
     NSLog(@"Color changed: %@", color);
 }
