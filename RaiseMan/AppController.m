@@ -58,5 +58,7 @@
     else {
         NSLog(@"Already loaded");
     }
+
+    [aboutPanel makeKeyAndOrderFront:nil];
 }
 @end
