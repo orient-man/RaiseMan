@@ -12,6 +12,7 @@
 
 NSString * const BNRTableBgColorKey = @"TableBackgroundColor";
 NSString * const BNREmptyDocKey = @"EmptyDocumentFlag";
+NSString * const BNRColorChangedNotification = @"BNRColorChanged";
 
 - (id)init
 {
@@ -50,6 +51,10 @@ NSString * const BNREmptyDocKey = @"EmptyDocumentFlag";
     NSData *colorAsData = [NSKeyedArchiver archivedDataWithRootObject:color];
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setObject:colorAsData forKey:BNRTableBgColorKey];
+
+    NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
+    [nc postNotificationName:BNRColorChangedNotification object:self];
+
     NSLog(@"Color changed: %@", color);
 }
 
