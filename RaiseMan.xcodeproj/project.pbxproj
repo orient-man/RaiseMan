@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F40637D016BDBFD1005CFE62 /* BBall.icns in Resources */ = {isa = PBXBuildFile; fileRef = F40637CF16BDBFD1005CFE62 /* BBall.icns */; };
+		F46020B616C3EC1E00EB4616 /* About.xib in Resources */ = {isa = PBXBuildFile; fileRef = F46020B516C3EC1E00EB4616 /* About.xib */; };
 		F46110DA16BEFD94006C1D63 /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = F46110D916BEFD94006C1D63 /* AppController.m */; };
 		F46110DE16BEFEE7006C1D63 /* PreferenceController.m in Sources */ = {isa = PBXBuildFile; fileRef = F46110DC16BEFEE7006C1D63 /* PreferenceController.m */; };
 		F46110DF16BEFEE7006C1D63 /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = F46110DD16BEFEE7006C1D63 /* Preferences.xib */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		F40637CF16BDBFD1005CFE62 /* BBall.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = BBall.icns; sourceTree = "<group>"; };
+		F46020B516C3EC1E00EB4616 /* About.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = About.xib; sourceTree = "<group>"; };
 		F46110D816BEFD94006C1D63 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
 		F46110D916BEFD94006C1D63 /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
 		F46110DB16BEFEE7006C1D63 /* PreferenceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferenceController.h; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				F4FA1EBB16B1D89500D01622 /* Person.m */,
 				F46110DB16BEFEE7006C1D63 /* PreferenceController.h */,
 				F46110DC16BEFEE7006C1D63 /* PreferenceController.m */,
+				F46020B516C3EC1E00EB4616 /* About.xib */,
 				F4FA1E9816B1D7FF00D01622 /* Document.xib */,
 				F4FA1E9B16B1D7FF00D01622 /* MainMenu.xib */,
 				F46110DD16BEFEE7006C1D63 /* Preferences.xib */,
@@ -259,6 +262,7 @@
 				F4FA1E9D16B1D7FF00D01622 /* MainMenu.xib in Resources */,
 				F40637D016BDBFD1005CFE62 /* BBall.icns in Resources */,
 				F46110DF16BEFEE7006C1D63 /* Preferences.xib in Resources */,
+				F46020B616C3EC1E00EB4616 /* About.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

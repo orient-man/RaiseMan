@@ -44,4 +44,19 @@
     [preferenceController showWindow:self];
 }
 
+- (IBAction)showAboutPanel:(id)sender
+{
+    if (!aboutPanel) {
+        // sets aboutPanel
+        if (![NSBundle loadNibNamed:@"About" owner:self]) {
+            NSLog(@"Ups! Not loaded");
+        }
+        else {
+            NSLog(@"Loaded");
+        }
+    }
+    else {
+        NSLog(@"Already loaded");
+    }
+}
 @end
